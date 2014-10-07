@@ -1,3 +1,14 @@
+{{#section 'head'}}
+	<!-- head stuff that needs to get added to make the sidebar functionality work -->
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href="css/styles.css" rel="stylesheet">
+{{/section}}
+
 <nav class="navbar navbar-default navbar-fixed-top" role="banner">
   <div class="container">
     <div class="navbar-header">
@@ -162,3 +173,9 @@
         </div><!--/right-->
   	</div><!--/row-->
 </div><!--/container-->
+
+{{#section 'scripts'}}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+{{/section}}
