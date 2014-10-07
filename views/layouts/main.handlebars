@@ -8,13 +8,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         {{{_sections.head}}}
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="css/styles.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -22,11 +27,40 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        {{{body}}}
+        <div id="masthead">  
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7">
+                    <a href="/"><h1>otherbirds</h1></a>
+                </div>
+              </div> 
+            </div><!--/container-->
+        </div><!--/masthead-->
+
+        <!--main-->
+        <div class="container">
+            <div class="row">
+              <!--left-->
+              <div class="col-md-3" id="leftCol">
+                <ul class="nav nav-stacked" id="sidebar">
+                  <li><a href="/tutorials">tutorials</a></li>
+                  <li><a href="/blog">blog</a></li>
+                  <li><a href="/stories">stories</a></li>
+                  <li><a href="/art-stuff">art stuff</a></li>
+                  <li><a href="/about">about</a></li>
+                </ul>
+              </div><!--/left-->
+              
+                <!--right-->
+                <div class="col-md-9">
+                    {{{body}}}
+                </div><!--/right-->
+            </div><!--/row-->
+        </div><!--/container-->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
