@@ -1,0 +1,19 @@
+{
+  "name": "otherbirds",
+  "version": "1.0.0",
+  "description": "otherbirds website",
+  "main": "otherbirds.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starakaj/otherbirds.git"
+  },
+  "author": "Sam Tarakajian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/starakaj/otherbirds/issues"
+  },
+  "homepage": "https://github.com/starakaj/otherbirds"
+}
