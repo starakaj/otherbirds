@@ -1,0 +1,22 @@
+{{#section 'head'}}
+	<!-- Head stuff -->
+{{/section}}
+
+<h1>Delicious Max Tutorials</h1>
+
+<ul>
+{{#each tutorials}}
+	<li>
+		<h2>{{title}}</h2>
+		<div>
+			<h4>{{description}}</h4>
+			<a href="{{youtube}}">Watch on YouTube</a>
+			<a href="{{path}}">Download</a>
+		</div>
+	</li>
+{{/each}}
+</ul>
+
+{{#section 'scripts'}}
+	<!-- scripts stuff -->
+{{/section}}

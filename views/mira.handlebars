@@ -1,0 +1,33 @@
+{{#section 'head'}}
+	<!-- Head stuff -->
+{{/section}}
+
+<img src="/img/mira-feature-1.jpg" alt="Holy shit it's Mira">
+
+<p>
+	Mira. You don't even know. How could you know? Basically, it's an iPad app for controlling Max. It's pretty cool–you throw some user interface elements into your Max patch and they show up instantly in Mira. "What about screensharing!" you should apopleptically at the top of your lungs. Listen, reader, if you were screensharing, all your bandwidth would be spent on streaming video and you'd have nothing left for low-latency MIDI. Besides, screenshaing wouldn't give you multitouch or a whole bunch of other Max-specific features. So Mira. If you've got Max and you've got an iPad, you should try it.
+</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/VqCrGKupTq0" frameborder="0" allowfullscreen></iframe>
+
+<p>
+	Something that people may or may not know is that Mira actually began life as a side project of mine back in college. At the time I had just finished a course in computer music with <a href="http://www.soundidea.org/">Butch Rovan</a>. In addition to a bulging catalog of sound and installation art, Butch worked on a couple projects that were particularly inspiring to me. There's the <a href="http://www.soundidea.org/rovan/research_glove.html">glove controller</a>, which is exactly what it sounds like, and additionally the <a href="http://www.soundidea.org/rovan/research_globe.html">Globe controller</a>, which embedded a few accelerometers and other sensors inside a glowing orb. At the time it made my tiny mind explode. I had no idea you could do this shit–take some random sensors, plug them into Max and get sounds. This was so early in my computer music development that I didn't even know that building alternative controllers was hard. Mapping problem? Never heard of it. 
+</p>
+
+<p>
+	So, buoyed by the idea that making alternative musical controllers was not only fun but also easy, I started working on a controller of my own. The project was called Gelie. The G stood for Gesture. I never worked out the rest. Instead of soldering something together, I decided to harness the sensors already available in the iPhone. This was back when the iPhone 3 had just come out, before any real musical controllers existed for iOS. Brimming with undergraduate hubris, I thought I was working on something that no one else had ever even thought of. I would write an app so engaging, so revolutionary, that it would not only bring me fame and wealth, but also make the world fall in love with experimental computer music in the same way that I had just last semester. As you can see, I succeeded.
+</p>
+
+<iframe width="960" height="720" src="//www.youtube.com/embed/N8hQp42jWJo" frameborder="0" allowfullscreen></iframe>
+
+<p>
+	Gelie was spectacularly ambitious, in some ways even more ambitions that Mira. The iPhone app was actually just a front end controller. All the actualy sound processing happened in Pure Data. Messages sent to a specialized Pure Data patch would build a patch <em>dynamically</em> in response to what was coming from the iPhone. The design was heavily inspired by the <a href="http://www.reactable.com/">ReacTable</a>. The iOS app would let you string together generators and effects as well as exciters, which defined mappings between gestural and musical parameters. After college I lost interest in Gelie, but I held on to everything that I'd learned about Bonjour and OSC, waiting for the right project to put them to use. 
+</p>
+
+<p>
+	Mira was of course that project. Through the magic of YouTube and the linkbait allure of the word dubstep (the first Max YouTube video I made that got any real attention had the word 'dubstep' in the title. I promise that this was not a deliberate attempt to win views and I apologize to everyone who watched that video expecting more music and less DSP geek chat), I got in contact with Joshua at Cycling '74. We talked about how some of the things I wanted to work on might become a part of Max, and after some negotiation I started working on Mira.
+</p>
+
+{{#section 'scripts'}}
+	<!-- scripts stuff -->
+{{/section}}
