@@ -2,20 +2,33 @@
 	<!-- Head stuff -->
 {{/section}}
 
-<h1>Delicious Max Tutorials</h1>
+<h1 class="bestows">Delicious Max Tutorials</h1>
+<div class="page">
 
-<ul>
-{{#each tutorials}}
-	<li>
-		<h2>{{title}}</h2>
-		<div>
-			<h4>{{description}}</h4>
-			<a href="{{youtube}}">Watch on YouTube</a>
-			<a href="{{path}}">Download</a>
-		</div>
-	</li>
-{{/each}}
-</ul>
+	<ul class="media-list row">
+	{{#each tutorials}}
+		<li class="media media-two-column col-xs-12 col-sm-6">
+			<div class="media-thumb pull-left">
+				<a class="youtube-link" href="{{youtube}}" target:"_blank">
+					<img src="{{thumb}}" alt="" class="media-object">
+				</a>
+			</div>
+			<div class="media-body">
+				<div class="media-description">
+					
+					<h4 class="media-heading">{{title}}</h4>
+					<p>{{description}}</p>
+				</div>
+				<div class="media-download">
+					<button type="button" class="btn btn-default btn-download">
+						<a href="{{path}}"><img src="/img/download-icon.png" alt="Download"></a>
+					</button>
+				</div>
+			</div>
+		</li>
+	{{/each}}
+	</ul>
+</div>
 
 {{#section 'scripts'}}
 	<!-- scripts stuff -->

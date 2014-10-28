@@ -2,108 +2,112 @@
 	<!-- Head stuff -->
 {{/section}}
 
-<img src="/img/one-amp-scene.jpg" alt="Bridge looks kind of spooky at night, no?" width="100%">
+<div class="row">
 
-<p> 
+<img src="/img/one-amp-scene.jpg" alt="Bridge looks kind of spooky at night, no?" class="col-xs-12">
+
+<p class="col-xs-12"> 
 	I've always been weirdly fascinated by the idea of busking with Max. It's a combination of a couple of different things. For starters, there's the complete disconnect between the kinds of sounds that belong to the sphere of successful busking, and the sounds that so often come out of Max. If you set up on the street and you start playing some music, you'd better be prepared to play a saxophone rendition of the Godfather theme, or the theme from Amélie on an accordion. That's what brings in the quarters, yo. On the other hand, get me behind the wheel of a Max patch, and what comes out is likely to sound more like a medical emergency than a melody. If anybody's going to give me money, it's going to be because they want me to stop. 
 </p>
 
-<p>
+<p class="col-xs-12">
 	Even more enticing, there's the challenge of trying to get your complex, wire-bound setup out into the open world. Start enumerating the things you need to make sound with your computer, and you'll quickly find that doing it outside is all but out of the question. Don't even think about bringing a generator. Generators, as I've found out the hard way, suck.
 </p>
 
-<p>
+<p class="col-xs-12">
 	One-Amp Wonder as a format/event grew out of exactly these considerations. The basic premise was this: bring a single amp somewhere public. Invite a bunch of friends to bring something noisemaking. Let some music happen. First and foremost, I wanted to make music in public, without any real concern how said public felt about said music.
 </p>
 
-<h2>The Patch</h2>
+<h2 class="col-xs-12">The Patch</h2>
 
-<img src="/img/1-amp-patch.png" alt="I know this is what everyone says, but it's not nearly so complex as it looks" width="100%">
+<img src="/img/1-amp-patch.png" alt="I know this is what everyone says, but it's not nearly so complex as it looks" class="col-xs-12">
 
-<p>
+<p class="col-xs-12">
 	One-Amp Wonder was an excuse to play around with a few different patch ideas that I'd had in my head over the past couple months. First, say you're confronted by a problem: you've got Max open and you have only 30 seconds to make the loudest, most intense sound possible. What object do you reach for? Easy: tapin~ and tapout~. Just get a delay line going with some feedback and you can make some ears hurt, fast.
 </p>
 
-<img src="/img/watch-out.png" alt="Watch the fuck out">
+<img src="/img/watch-out.png" alt="Watch the fuck out" class="center-block">
 
-<p>
+<p class="col-xs-12">
 	Scary, I know. Well, scary, but at the same time, boring. A bit like being shot in the face, a delay line that creates instant, deafening feedback is as terrifying as it is disinteresting. We can do better. In fact, all we have to do is throw in some peak limiting, and all at once we've got a delay line that will make your ears bleed for sure, but in beautiful and unpredictable ways. The idea came to me from <a href="https://www.youtube.com/watch?v=tAtYht4QVnA">Max/MSP Live Coding</a> video that I saw on YouTube awhile back. By the idea came to me, I mean to say I stole it.
 </p>
 
-<img src="/img/feedback-within-limits.png" alt="Feedback appreciated">
+<img src="/img/feedback-within-limits.png" alt="Feedback appreciated" class="center-block">
 
-<p>
+<p class="col-xs-12">
 	Here's a picture of the delay line in the final patch. As you can hear, using the delay line like this lets you make some very pretty textures.
 </p>
 
-<audio controls>
+<audio controls class="col-xs-12">
 	<source src="/audio/one-amp-textures.m4a" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
 
-<p>
+<p class="col-xs-12">
 	These textures are delightful, but also a bit static. As you can see in the patch above, I also connected a phasor~ to the tapout~ object, which lets you make your textures arpeggiate, either up or down, depending on your mood.
 </p>
 
-<audio controls>
+<audio controls class="col-xs-12">
 	<source src="/audio/one-amp-arpeggiator.m4a" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
 
-<p>
+<p class="col-xs-12">
 	Then, of course, I had to turn my attention to my one true love, 2d.wave~.
 </p>
 
-<img src="/img/true-love.png" alt="True love">
+<img src="/img/true-love.png" alt="True love" class="col-xs-12 center-block fixed-size">
 
-<p>
+<p class="col-xs-12">
 	Honestly, have you seen anything so beautiful in your entire life? Obviously not. 
 </p>
 
-<p>
+<p class="col-xs-12">
 	There's a lot of nice things to say about 2d.wave~, and I said a lot of them in my tutorial/spotlight/love sonnet to 2d.wave~, <a href="https://www.youtube.com/watch?v=xOg6ODajMSM">Tutorial 19: 2d.wave~, a glitchy love story </a>. Basically, there are three major parameters useful for controlling 2d.wave~: x-index, y-index, and the number of rows. By modulating these and with a little bit of practice, you can move quickly and effortlessly between loops, textures and tones. That kind of performance fluidity is exactly what makes 2d.wave~ so much fun to play around with.
 </p>
 
-<audio controls>
+<audio controls class="col-xs-12">
 	<source src="/audio/one-amp-2d-wave.m4a" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
 
-<p>
+<p class="col-xs-12">
 	Now, here's where this patch gets interesting. During my experimentation with 2d.wave~, I wanted to have a knob that would control the start position for my buffer playback. Turning that knob to the left would shift the start of sample playback close to the beginning of the sample, and turning the knob to the right would move sample playback closer to the end of the sample.
 </p>
 
-<img src="/img/one-amp-glitch-drum.png" alt="The beautiful fuck-up">
+<img src="/img/one-amp-glitch-drum.png" alt="The beautiful fuck-up" class="center-block">
 
-<p>
+<p class="col-xs-12">
 	Anyway, that was the idea. But as is so often the case when playing with Max, I fucked it up. Instead of controlling sample playback position, turning the knob made playback jump immediately back to the beginning of the sample, causing an audible pop and glitch. Fortunately, as is so often the case with Max, the fuck-up sounded pretty cool, especially when I turned the knob quickly, causing the sample to glitch at an audible rate.
 </p>
 
-<audio controls>
+<audio controls class="col-xs-12">
 	<source src="/audio/one-amp-the-glitch.m4a" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
 
-<p>
+<p class="col-xs-12">
 	Finally, I wanted to play around with a strange and non-linear control scheme for my patch. Actually, being constrained by the LPD8's relatively small number of controls ended up working to my advantage. With only eight knobs, I had more parameters than inputs, and rather than try to come up with something complicated, I adopted an attitude that I'd used many times before as an overworked undergraduate: Fuck it. Rallying under that inspirational motto, I decided that I'd just let one knob control many parameters. So, knob one would control both feedback in my delay line <em>and</em> the glitch effect in my drum looper. Knob number five would be the speed of my drum loop <em>and</em> the speed of an envelope on an oscillator. Surprisingly, I'm not <a href="http://dx.doi.org/10.1017/S1355771802002030">the first person</a> to try something like this, or to think that it's worth doing.
 </p>
 
-<p>
+<p class="col-xs-12">
 	Early tests with this setup sound something like the following. Yes, the audio is furiously and unrelentingly mono, but remember that this was all intended to be played out of a single amplifier. Warning: it gets loud.
 </p>
 
-<audio controls>
+<audio controls class="col-xs-12">
 	<source src="/audio/one-amp-recording.m4a" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
 
-<p>
+<p class="col-xs-12">
 	When it came time to actually perform, my good buddy <a href="http://gradientfade.bandcamp.com/">Geoff Morris</a> came to help out with some sounds of his own.
 </p>
 
-<img src="/img/sam-geoff-bridge.jpg" alt="Dudes under bridges" width="100%">
+<img src="/img/sam-geoff-bridge.jpg" alt="Dudes under bridges" class="col-xs-12">
 
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/137605552&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+</div>
 
 {{#section 'scripts'}}
 	<!-- scripts stuff -->

@@ -1,4 +1,5 @@
 var fs = require('fs');
+var url = require('url');
 
 var tutorials = [
 	{
@@ -143,7 +144,7 @@ var tutorials = [
 		title: "Bloom and Doom",
 		path: '/tutorials/24-bloom.zip',
 		youtube: 'https://www.youtube.com/watch?v=75gTVFaNsF0',
-		description: "Kekeke"
+		description: "Michael Bay school of visual aesthetics"
 	},
 	{
 		title: "Cell Pump",
@@ -327,7 +328,60 @@ var tutorials = [
 	},
 ];
 
-exports.get = function() {
+var projects = [
+	{
+		title: "Mira",
+		project: "mira",
+		description: "An iPad controller app for Max/MSP",
+		thumb: "mira-thumb.jpg",
+	},
+	{
+		title: "Breath",
+		project: "breath",
+		description: "An experiment with hands-free breathing",
+		thumb: "breath-thumb.png",
+	},
+	{
+		title: "One-Amp Wonder",
+		project: "one-amp",
+		description: "Under bridge music",
+		thumb: "one-amp-scene.jpg",
+	},
+	{
+		title: "Tecton",
+		project: "tecton",
+		description: "Music for pianos and loud",
+		thumb: "tecton.jpg",
+	},
+	{
+		title: "Sand Defacing All Surfaces",
+		project: "sand",
+		description: "Music video for the piece by Derek Piotr",
+		thumb: "sand-thumb.png",
+	},
+	{
+		title: "Flotsam",
+		project: "flotsam",
+		description: "The Friends of Sam Listen To Music show",
+		thumb: "flotsam-thumb.jpg",
+	},
+];
+
+exports.tutorials = function() {
+
+	for (var i=0; i<tutorials.length; i++) {
+		var tutorial = tutorials[i];
+		console.log(tutorial.youtube);
+		var parsed = url.parse(tutorial.youtube, true);
+		console.log(parsed);
+		var vidid = parsed.query.v;
+		tutorials[i].thumb = "https://img.youtube.com/vi/" + vidid + "/2.jpg";
+		console.log(tutorials[i].thumb);
+	}
 	// Maybe in the future, think about how to make this a little less hard coded
 	return tutorials;
+};
+
+exports.projects = function() {
+	return projects;
 };

@@ -27,35 +27,29 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div id="masthead">  
+        <header class="navbar navbar-masthead navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
-              <div class="row">
-                <div class="col-md-7">
-                    <a href="/"><h1>otherbirds</h1></a>
+                <div class="collapse navbar-collapse bs-example-masthead-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a class="navbar-brand" href="/">otherbirds</a></li>
+                        <li><a href="/tutorials">tutorials</a></li>
+                        <li><a href="/projects">projects</a></li>
+                        <li><a href="/about">about</a></li>
+                    </ul>
                 </div>
-              </div> 
             </div><!--/container-->
-        </div><!--/masthead-->
+        </header>
+
+        <div>
+            {{{_sections.banner}}}
+        </div>
+        
 
         <!--main-->
         <div class="container">
-            <div class="row">
-              <!--left-->
-              <div class="col-md-3" id="leftCol">
-                <ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="/tutorials">tutorials</a></li>
-                  <li><a href="/blog">blog</a></li>
-                  <li><a href="/stories">stories</a></li>
-                  <li><a href="/art-stuff">art stuff</a></li>
-                  <li><a href="/about">about</a></li>
-                </ul>
-              </div><!--/left-->
-              
-                <!--right-->
-                <div class="col-md-9">
+            <div class="content">
                     {{{body}}}
-                </div><!--/right-->
-            </div><!--/row-->
+            </div><!--/content-->
         </div><!--/container-->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

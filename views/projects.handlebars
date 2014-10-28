@@ -1,0 +1,27 @@
+{{#section 'head'}}
+	<!-- Head stuff -->
+{{/section}}
+
+<h1 class="bestows">Projects</h1>
+<div class="page">
+
+	<ul class="media-list row">
+	{{#each projects}}
+		<li class="media media-card col-xs-12 col-sm-6 col-lg-4">
+			<div class="row">
+				<a href="/projects/{{project}}" class="col-xs-12">
+					<img src="/img/{{thumb}}" alt="" class="project-thumb">
+				</a>
+				<div class="col-xs-12 project-caption">
+					<h3>{{title}}</h3>
+					<p>{{description}}</p>
+			</div>
+			</div>
+		</li>
+	{{/each}}
+	</ul>
+</div>
+
+{{#section 'scripts'}}
+	<!-- scripts stuff -->
+{{/section}}

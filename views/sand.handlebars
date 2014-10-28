@@ -1,0 +1,47 @@
+{{#section 'head'}}
+	<!-- Head stuff -->
+{{/section}}
+
+
+<div class="row">
+	<h1 class="col-xs-12">Sand Defacing All Surfaces</h1>
+	<div>
+		<img align="left" class="col-xs-12 col-sm-8 col-md-8" src="/img/sam-derek-woods.png" alt="Look, Derek, more woods">
+		<p>
+			Check it out, it's me and <a href="http://derekpiotr.com/">Derek Piotr</a> hanging out in the woods. To look at this picture, you'd think that Derek and I had been wandering through the woods together all our lives. As it turns out, this was the first time we'd met in person.
+		</p>
+
+		<p>
+			Apparently it's possible to meet people in coffee shops or bars or farmer's markets or other places of congregation. Derek and I met the old fashioned way: on the internet. I don't recall the exact circumstances but I'm pretty sure I'd found his music on Soundcloud and, hearing the telltale sounds of music composed in Max, decided to drop him a line. I asked him to send me one of his Max patches. Derek said that he'd love to, except that he composed entirely in Audacity. Ah. Well then. A few months later, when I found myself on the east coast, I made a special point to visit Derek.
+		</p>
+
+		<p>
+			A little while later I asked Derek if he was working on any music videos for his new album, Raj. He said yes, that <a href="http://jeremybailey.net/">Famous New Media Artist Jeremy Bailey</a> had worked on a <a href="https://vimeo.com/74533589">music video</a> for the song <em>Open</em>. Seizing the opportunity to move in the same sphere as Jeremy, possibly the most famous new media artist of all time, decided to make a video for <em>Sand Defacing All Surfaces</em>, my favorite track of the new album.
+		</p>
+	</div>
+
+	<p class="col-xs-12">
+		Progress on the video for <em>Sand Defacing All Surfaces</em> came in fits and jumps. The biggest hurdles turned out to be technical. Derek had said that when he was imagining the space for this sound he saw a huge, looming cloud of black sand blowing towards him. Wanting to have as much control as possible over that sand, I spent a long time deep in an openGL rabbit hole, trying to build a complex Max patch to manage a massive particle swarm that could move and react to the music. Managing that complex graphics scene would have been hard enough, but an even greater challenge came from trying to render the video in real time. The whole point of using Max was so that I could create tight synchronization between the music and the video. With Max I could analyze the audio in real time, extracting envelope and frequency information and using that data to control the graphics scene. Unfortunately, each video frame took several seconds to render, so I couldn't just let the audio play in real time while sending parameters to the video scene. In the end I built an outrageous and overly complicated patch-behemoth that would advance the video a single frame, play a few milliseconds of audio, send the extracted parameters to the video synthesis engine and then render a frame. 
+	</p>
+
+	<p class="col-xs-12">
+		So after weeks of work and an overnight render, I was finally ready to taste the fruit of my labors. And, lo and behold, it sucked. Boring, 1990-era computer geometry bouncing around with some loose connection to the music.
+	</p>
+
+	<p class="col-xs-12">
+		I went back to the drawing board. "Fuck the sand," I thought. "What about the surfaces?" With a borrowed DSLR I wandered the streets of the East Bay, getting right up close to every surface I could find and slowly panning across it. Then I took the footage, brought it home, messed with the colors a bit and started chromakeying layer on top of layer. The whole effort took about a day, and the end result was, in my opinion, several orders of magnitude cooler than the feat of nebbish techno-wankery that I'd first come up with.
+	</p>
+
+	<p class="col-xs-12">
+		But you be the judge.
+	</p>
+
+	<div>
+	<iframe class="vimeo-embed" src="//player.vimeo.com/video/58804313" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+
+</div>
+
+{{#section 'scripts'}}
+	<!-- scripts stuff -->
+{{/section}}

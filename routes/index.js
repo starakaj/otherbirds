@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var tutorials = require('../public/js/tutorials');
+var content = require('../public/js/content');
 var url = require('url');
 var path = require("path");
 var NA = require("nodealytics");
@@ -42,13 +42,17 @@ router.get('/projects/breath', function(req, res) {
 	res.render('breath', {title: 'Breath'});
 });
 
-router.get('/projects/viz1', function(req, res) {
-	res.render('viz1', {title: 'Vizuals 1'});
+router.get('/projects/sand', function(req, res) {
+	res.render('sand', {title: 'Sand Defacing All Surfaces'});
+});
+
+router.get('/projects/flotsam', function(req, res) {
+	res.render('flotsam', {title: 'Flotsam'});
 });
 
 router.get('/tutorials', function(req, res) {
 	res.render('tutorials', {title: 'Max Tutorials',
-							tutorials: tutorials.get()});
+							tutorials: content.tutorials()});
 });
 
 router.get('/tutorials/*', function(req, res, next) {
@@ -62,6 +66,11 @@ router.get('/tutorials/*', function(req, res, next) {
 		}
 	}
 	next();
+});
+
+router.get('/projects', function(req, res) {
+	res.render('projects', {title: "Projects",
+							projects: content.projects()});
 });
 
 module.exports = router;
