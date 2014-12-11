@@ -17,6 +17,14 @@ module.exports = function (grunt) {
         file: 'bin/www'
       }
     },
+    forever: {
+      server: {
+        options: {
+          index: 'app.js',
+          logDir: 'logs'
+        }
+      }
+    },
     watch: {
       options: {
         nospawn: true,
@@ -54,6 +62,8 @@ module.exports = function (grunt) {
   grunt.config.requires('watch.server.files');
   files = grunt.config('watch.server.files');
   files = grunt.file.expand(files);
+
+  grunt.loadNpmTasks('grunt-forever');
 
   grunt.registerTask('delayed-livereload', 'Live reload after the node server has restarted.', function () {
     var done = this.async();
