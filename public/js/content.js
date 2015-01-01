@@ -154,7 +154,7 @@ var tutorials = [
 	},
 	{
 		title: "The Floor is Lava",
-		path: '/tutorials/26-lava.zip',
+		path: '/tutorials/26_lava.zip',
 		youtube: 'https://www.youtube.com/watch?v=ImZimT_dQMY',
 		description: "Make a lava lamp. Now you're a famous new media artist"
 	},
