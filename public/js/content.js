@@ -326,6 +326,12 @@ var tutorials = [
 		youtube: 'https://www.youtube.com/watch?v=VDQfwODQc48',
 		description: "Internet, can you please behave yourself for five minutes?"
 	},
+	{
+		title: "Processing I: Deception",
+		path: '/tutorials/55-deception.zip',
+		youtube: "http://youtu.be/FCazZMdSHtk",
+		description: "Processing + Max 2015"
+	},
 ];
 
 var projects = [
