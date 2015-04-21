@@ -329,8 +329,14 @@ var tutorials = [
 	{
 		title: "Processing I: Deception",
 		path: '/tutorials/55-deception.zip',
-		youtube: "http://youtu.be/FCazZMdSHtk",
+		youtube: "https://www.youtube.com/watch?v=FCazZMdSHtk",
 		description: "Processing + Max 2015"
+	},
+	{
+		title: "Processing II: Formalizm",
+		path: '/tutorials/56-formalizm.zip',
+		youtube: "https://www.youtube.com/watch?v=c4iEZExlO3s",
+		description: "Sophomore Formalizm"
 	},
 ];
 
