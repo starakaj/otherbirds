@@ -56,6 +56,8 @@ router.get('/tutorials', function(req, res) {
 });
 
 router.get('/tutorials/*', function(req, res, next) {
+	console.log("parames");
+	console.log(req.params);
 	var pathname = url.parse(req.url).pathname;
 	var pathnameArray = pathname.split("/");
 	if (pathnameArray.length >= 2) {
@@ -65,7 +67,12 @@ router.get('/tutorials/*', function(req, res, next) {
 			trackDownloadEvent(filename, pathname, res);
 		}
 	}
-	next();
+	if (req.query.skip_thanks) {
+		next();
+	} else {
+		res.render('thanks', {title: "Thanks",
+								path_url: req.url});
+	}
 });
 
 router.get('/projects', function(req, res) {

@@ -68,6 +68,10 @@ body {
   margin-top: 30px;
 }
 
+.app-store-img {
+  max-width: 250px;
+}
+
 .fixed-size {
   height: auto;
   width: auto;
